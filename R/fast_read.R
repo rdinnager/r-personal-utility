@@ -12,7 +12,8 @@ fast_read <- function(path, sep = ",", header = TRUE) {
 
   if (header) skip<-1 else skip<-0
   ## Read in a single line of the file to get the variable types for the columns
-  types <- read.table(path, nrows=2, sep=sep, stringsAsFactors=FALSE, header=header)[2,]
+  types <- read.table(path, nrows=2, sep=sep, stringsAsFactors=FALSE, header=header,
+                      comment.char="", check.names=FALSE)[2,]
   ## convert integers to double
   types[,sapply(types[1,], is.integer)]<-as.double(types[,sapply(types[1,], is.integer)])
   types<-as.list(types)
