@@ -20,4 +20,7 @@ A function to read in data from a file into a data.frame using \code{\link{scan}
 \code{\link{read.table}}. This is still not as fast as \code{\link{fread}} from \code{data.table}, but it outputs
 a data.frame, so I use when I need a data.frame but the files are big!
 }
+\details{
+This is slower than read.table for small data files, and works much better if there are many rows and few columns.
+}
 

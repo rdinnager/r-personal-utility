@@ -7,6 +7,7 @@
 #' @param sep Seperator character used in file. Default is "," for a .csv file
 #' @param header Is there a header line in the file?
 #' @return a data.frame with the file data
+#' @details This is slower than read.table for small data files, and works much better if there are many rows and few columns.
 #' @export
 fast_read <- function(path, sep = ",", header = TRUE) {
 
