@@ -9,6 +9,10 @@ fast\_read: A function to read in data to a data.frame faster using `scan` inste
 
 csv\_cat: A function to concatenate all csv files in a directory using unix commands (much faster than R).
 
+df\_split: A function to split data.frames into a list of smaller data.frames.
+
+df\_list2csv: A function to take a list of data.frames and save them to individual sequentially numbered csv files.
+
 More functions will be added as I need them.
 
 Installation:  
