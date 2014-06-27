@@ -10,7 +10,7 @@
 #' subsequent analysis. I use this to put these csv files back into one csv. Using unix commands is way faster than R for this.
 #' @export
 csv_cat <- function(dir, outfile) {
-  newfile <- paste(dir,"/",outfile,".csv")
+  newfile <- paste(dir,"/",outfile,".csv", sep = "")
   system(paste("awk 'FNR==1 && NR!=1{next;}{print}' ", dir, "/*.csv > ", newfile, sep = ""))
   return(newfile)
 }
