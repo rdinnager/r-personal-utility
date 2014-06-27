@@ -11,6 +11,6 @@
 #' @export
 csv_cat <- function(dir, outfile) {
   newfile <- paste(dir,"/",outfile,".csv")
-  system(paste("awk 'FNR==1 && NR!=1{next;}{print}' ", dir, "/*.csv > ", newfile))
+  system(paste("awk 'FNR==1 && NR!=1{next;}{print}' ", dir, "/*.csv > ", newfile, sep = ""))
   return(newfile)
 }
